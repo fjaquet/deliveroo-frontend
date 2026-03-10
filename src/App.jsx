@@ -8,6 +8,7 @@ import Panier from "./components/Panier";
 function App() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [basket, setBasket] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,13 +56,19 @@ function App() {
                       key={category.name}
                       category={category}
                       currency={data.restaurant.price[0]}
+                      basket={basket}
+                      setBasket={setBasket}
                     />
                   );
                 })}
               </div>
 
               <div className="panier">
-                <Panier />
+                <Panier
+                  basket={basket}
+                  setBasket={setBasket}
+                  currency={data.restaurant.price[0]}
+                />
               </div>
             </div>
           </main>

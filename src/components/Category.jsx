@@ -1,6 +1,6 @@
 import Meal from "./Meal";
 
-const Category = ({ category, currency }) => {
+const Category = ({ category, currency, basket, setBasket }) => {
   //   console.log("category => ", category);
   return (
     <section className="category">
@@ -8,7 +8,13 @@ const Category = ({ category, currency }) => {
       <div className="category__meals">
         {category.meals.map((meal) => (
           // <Meal key={meal.id} title={meal.title} description={meal.description} />
-          <Meal key={meal.id} meal={meal} currency={currency} />
+          <Meal
+            key={meal.id}
+            meal={meal}
+            currency={currency}
+            basket={basket}
+            setBasket={setBasket}
+          />
         ))}
       </div>
     </section>

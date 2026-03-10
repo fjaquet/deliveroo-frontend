@@ -82,10 +82,77 @@ main .container {
   cursor: not-allowed;
 }
 
+.validation-allowed {
+  background-color: #00cdbd;
+  color: white;
+  cursor: auto;
+}
+
 .basket__empty {
   color: #868a8a;
   padding: 3rem 0;
   text-align: center;
+}
+
+.basket__items {
+  padding: 0 1rem;
+}
+
+.basket__item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+.basket__item-controls {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.basket__item-btn {
+  border-radius: 50%;
+  color: #00cdbd;
+  border: #00cdbd solid 2px;
+  background-color: white;
+}
+
+.basket__item-count {
+  margin: 0 5px;
+}
+
+.basket__item-desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket__item-name {
+  width: 10rem;
+}
+
+.basket__item-price {
+  text-align: right;
+  width: 85px;
+}
+
+.basket__subtotal {
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 0 1rem;
+}
+
+.basket__subtotal-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.basket__total {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin: 1rem 0;
 }
 
 main {
@@ -116,6 +183,10 @@ main {
   cursor: pointer;
   padding: 15px;
   border-radius: 5px;
+}
+
+.meal:hover {
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
 }
 
 .meal__content {

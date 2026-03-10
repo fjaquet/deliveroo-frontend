@@ -1,8 +1,30 @@
 import { FaStar } from "react-icons/fa";
+import { addToBasket } from "../utils/manageBasket";
 
-const Meal = ({ meal, currency }) => {
+const Meal = ({ meal, currency, basket, setBasket }) => {
   return (
-    <div className="meal">
+    <div
+      className="meal"
+      onClick={() => {
+        addToBasket(meal.id, meal.title, meal.price, basket, setBasket);
+        // console.log(meal);
+        // const newBasket = structuredClone(basket);
+        // if (!Object.keys(basket).includes(meal.id)) {
+        //   newBasket[meal.id] = {
+        //     name: meal.title,
+        //     count: 1,
+        //     price: Number(meal.price),
+        //   };
+        //   newBasket[meal.price];
+        // } else {
+        //   newBasket[meal.id].count += 1;
+        //   newBasket[meal.id].price =
+        //     newBasket[meal.id].count * Number(meal.price);
+        // }
+        // setBasket(newBasket);
+        // console.log(newBasket);
+      }}
+    >
       <div className="meal__content">
         <h3 className="meal__title">{meal.title}</h3>
         {meal.description && (
