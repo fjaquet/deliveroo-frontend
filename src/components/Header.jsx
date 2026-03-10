@@ -1,4 +1,3 @@
-// import logo from "../assets/img/Deliveroo-logo.png";
 import logo from "../assets/img/1280px-Deliveroo_logo.svg.png";
 
 const Header = ({ name, description, picture }) => {

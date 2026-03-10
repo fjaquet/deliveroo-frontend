@@ -183,6 +183,7 @@ main {
   cursor: pointer;
   padding: 15px;
   border-radius: 5px;
+  justify-content: space-between;
 }
 
 .meal:hover {
@@ -235,4 +236,15 @@ main {
   height: 130px;
   object-fit: cover;
   border-radius: 5px;
+}
+
+@media (max-width: 640px) {
+  .container,
+  .header__content {
+    flex-direction: column;
+  }
+
+  .basket {
+    width: 96vw;
+  }
 }

@@ -19,13 +19,11 @@ const addToBasket = (id, name, price, basket, setBasket) => {
 
 const removeFromBasket = (id, basket, setBasket) => {
   const newBasket = structuredClone(basket);
-  console.log("dans fct");
 
   if (Object.keys(basket).includes(id)) {
     if (newBasket[id].count - 1 === 0) {
       delete newBasket[id];
     } else {
-      console.log("will decrement");
       newBasket[id].count -= 1;
       newBasket[id].subTotalPrice = Number(
         newBasket[id].count * newBasket[id].uniquePrice,
